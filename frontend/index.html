@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="intro">Unicorns</h1>
+        <form class="row g-2 needs-validation" novalidate>
+            <div class="col-md-12">
+                <label for="name-input" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name-input">
+                <div class="invalid-feedback" id="name-feedback">
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="loves-container">
+                <label for="loves-input" class="form-label">Loves:</label>
+                <input type="text" class="form-control" id="loves-input">
+                <div class="invalid-feedback" id="loves-feedback">
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="weight-container">
+                <div class="row">
+                    <div class="col-md-3 form-left">
+                        <label for="weight-filter" class="form-label">Weight:</label>
+                        <select class="form-select" id="weight-filter">
+                            <option selected>greater than</option>
+                            <option>less than</option>
+                        </select>
+                    </div>
+                    <div class="col-md-9 form-right mt-2">
+                        <label for="weight-input" class="form-label"></label>
+                        <input type="number" class="form-control" id="weight-input">
+                        <div class="invalid-feedback" id="weight-feedback">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="gender-container">
+                <label for="choose-gender" class="form-label">Gender:</label>
+                <select class="form-select" id="choose-gender">
+                    <option selected>any</option>
+                    <option>male</option>
+                    <option>female</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="vampires-container">
+                <div class="row">
+                    <div class="col-md-3 form-left">
+                        <label for="vampires-filter" class="form-label">Vampires:</label>
+                        <select class="form-select" id="vampires-filter">
+                            <option selected>greater than</option>
+                            <option>vampires exist</option>
+                        </select>
+                    </div>
+                    <div class="col-md-9 form-right mt-2">
+                        <label for="vampires-input" class="form-label"></label>
+                        <input type="number" class="form-control" id="vampires-input">
+                        <div class="invalid-feedback" id="vampires-feedback">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="Vaccin-container">
+                <label for="is-vaccinated" class="form-label">Vaccinated:</label>
+                <select class="form-select" id="is-vaccinated">
+                    <option selected>any</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="dob-container">
+                <div class="row">
+                    <div class="col-md-3 form-left">
+                        <label for="dob-filter" class="form-label">Date of birth:</label>
+                        <select class="form-select" id="dob-filter">
+                            <option selected>earlier than</option>
+                            <option>later than</option>
+                        </select>
+                    </div>
+                    <div class="col-md-9 form-right mt-2">
+                        <label for="dob-input" class="form-label"></label>
+                        <input type="date" class="form-control" id="dob-input">
+                        <div class="invalid-feedback" id="dob-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 form-container" id="sort-container">
+                <label for="sort-input" class="form-label">Sort By:</label>
+                <input type="text" class="form-control" id="sort-input">
+                <div class="invalid-feedback" id="sort-feedback">
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" id="get-unicorns" type="submit">Get Unicorns</button>
+            </div>
+            <div id="checkbox-container">
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-name" checked>
+                        <label class="form-check-label" for="check-name">
+                            Name
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-loves" checked>
+                        <label class="form-check-label" for="check-loves">
+                            Loves
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-weight" checked>
+                        <label class="form-check-label" for="check-weight">
+                            Weight
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-gender" checked>
+                        <label class="form-check-label" for="check-gender">
+                            Gender
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-vampires" checked>
+                        <label class="form-check-label" for="check-vampires">
+                            Vampires
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-vaccinated" checked>
+                        <label class="form-check-label" for="check-vaccinated">
+                            Vaccinated
+                        </label>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check-dbd" checked>
+                        <label class="form-check-label" for="check-dbd">
+                            Date of Birth
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <table class="table table-bordered" id="table-container">
+            <thead class="table-light">
+                <th id="name-table" scope="col">Name</th>
+                <th id="loves-table" scope="col">Loves</th>
+                <th id="weight-table" scope="col">Weight</th>
+                <th id="gender-table" scope="col">Gender</th>
+                <th id="vampires-table" scope="col">Vampires</th>
+                <th id="vaccine-table" scope="col">Vaccinated</th>
+                <th id="dob-table" scope="col">Dob</th>
+            </thead>
+            <tbody id="unicorns-table">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
